@@ -10,41 +10,42 @@
 	<link rel="stylesheet" href="./index.css">
 </head>
 <body>
-	<div>
-	<div class="menu"> 
-		<div class="menu-image">
-			<img src="./cross.svg" alt="">
-		</div>
-		<div class="menu-inner">
-			<h1>Закажите звонок</h1>
-			<div class="heading">
-				<p>Оставьте контакты, мы проконсультируем </p>
-				<p>вас бесплатно в удобное время</p>
+	<div class="menu-wrapper">
+		<div class="menu"> 
+			<div class="menu-image">
+				<img src="./cross.svg" alt="">
 			</div>
-			
-			<form action="#" class="form">
-					<div class="menu-inputs">
-						<div class="input-box">
-							<input type="text" placeholder="Имя">
+			<div class="menu-inner">
+				<h1>Закажите звонок</h1>
+				<div class="heading">
+					<p>Оставьте контакты, мы проконсультируем </p>
+					<p>вас бесплатно в удобное время</p>
+				</div>
+				
+				<form action="#" class="form">
+						<div class="menu-inputs">
+							<div class="input-box">
+								<input type="text" placeholder="Имя">
+							</div>
+							<div class="input-box">
+								<input type="text" placeholder="Телефон">
+							</div>						
 						</div>
-						<div class="input-box">
-							<input type="text" placeholder="Телефон">
-						</div>						
-					</div>
-					<div class="question">
-						<div class="input-box">
-							<input type="text" placeholder="Ваш вопрос">
+						<div class="question">
+							<div class="input-box">
+								<input type="text" placeholder="Ваш вопрос">
+							</div>
 						</div>
-					</div>
-					<div class="menu-submit">
-						<button type="submit" class="submit-button">Отправить</button>
-						<div class="menu-checkbox">
-							<input type="checkbox">
-							<p>Я согласен на обработку  персональных данных</p>
+						<div class="menu-submit">
+							<button type="submit" class="submit-button">Отправить</button>
+							<div class="menu-checkbox">
+								<input type="checkbox">
+								<p>Я согласен на обработку  персональных данных</p>
+							</div>
 						</div>
-					</div>
 				</form>
 			</div>
+		</div>
 	</div>
 	<div class="container">
 		<header>
@@ -232,22 +233,25 @@
 		
 		<div class="small-nav">
 			<h1>Разделы сайта</h1>
-			<img src="./plus.svg" alt="">
-		</div>	
-		<div class="nav">
-			<h1>Разделы сайта</h1>
-			<div>
-				<p>О компании</p>
-				<p>Продукты</p>
-				<p>Производство печатных плат</p>
-				<p>Монтаж печатных плат</p>
-				<div class="nav-ext-mobile">
-					<p>Комплектующие</p>
-					<p>Доставка</p>
-					<p>Контакты</p>
+			<img class="plus" src="./plus.svg" alt="">
+			<img class="minus " src="./minus.svg" alt="" >
+		</div>
+		<div class="nav-wrapper">
+			<div class="nav">
+				<h1>Разделы сайта</h1>
+				<div>
+					<p>О компании</p>
+					<p>Продукты</p>
+					<p>Производство печатных плат</p>
+					<p>Монтаж печатных плат</p>
+					<div class="nav-ext-mobile">
+						<p>Комплектующие</p>
+						<p>Доставка</p>
+						<p>Контакты</p>
+					</div>
 				</div>
 			</div>
-		</div>
+		</div>	
 
 		<div class="nav-ext">
 			<div>
@@ -257,11 +261,12 @@
 
 			</div>
 		</div>
+		<div class="small-nav">
+			<h1>Наш офис</h1>
+			<img class="office-plus" src="./plus.svg" alt="">
+			<img class="office-minus " src="./minus.svg" alt="" >
+		</div>
 		<div class="office">
-			<div class="office-wrapper">
-				<h1>Наш офис</h1>
-				<img src="./minus.svg" alt="">
-			</div>
 			<div>
 				<p>г. Мытищи, Олимпийский проспект, д.10</p>
 				<p>+7 (495) 589-40-50</p>
