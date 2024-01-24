@@ -24,7 +24,7 @@ body {
 	top: 0;
 	left: 0;
 	right: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	display: none;
 	z-index: 2;
@@ -370,6 +370,8 @@ button {
 	background-color: #00B2FF;
 	cursor: pointer;
 	transition: all 0.3s ease;
+	color: #FFF;
+
 }
 
 .navigation h1 {
@@ -379,7 +381,15 @@ button {
 	font-weight: 400;
 	line-height: 140.625%;
 	color: #00B2FF;
+
 }
+.navigation:hover h1 {
+	color: #fff;
+
+}
+
+
+
 
 .navigation img {
 	fill: #00B2FF;
