@@ -1,6 +1,9 @@
+import './index.scss'
+
 const menuBtn = document.querySelector('.burger-menu')
-const menu = document.querySelector('.menu-wrapper')
-const closeBtn = document.querySelector('.menu-image img')
+const menu = document.querySelector('dialog')
+const closeBtn = document.querySelector('dialog .cross')
+
 
 const nav = document.querySelector('.nav')
 
@@ -12,12 +15,21 @@ const plus = document.querySelector('.plus')
 const officePlus = document.querySelector('.office-plus')
 const officeMinus = document.querySelector('.office-minus')
 
+const check = document.querySelector('.checkbox-wrapper')
+const tick = document.querySelector('.tick')
+
+const modalCheck = document.querySelector('.modal-checkbox-wrapper')
+const modalTick = document.querySelector('.modal-tick')
+
+console.log(modalCheck)
+
 menuBtn.addEventListener('click', ()=>{
-	menu.classList.add('menu-open')
+	menu.showModal()
 })
 closeBtn.addEventListener('click', ()=>{
-	menu.classList.remove('menu-open')
+	menu.close()
 })
+
 
 plus.addEventListener('click', ()=>{
 	nav.classList.add('nav-open')
@@ -43,5 +55,10 @@ officeMinus.addEventListener('click', ()=>{
 	officeMinus.classList.remove('office-minus-open')
 })
 
+check.addEventListener('click', ()=>{
+	tick.classList.toggle('tick-visible')
+})
 
-console.log(minus)
+modalCheck.addEventListener('click', ()=>{
+	modalTick.classList.toggle('modal-tick-visible')
+})

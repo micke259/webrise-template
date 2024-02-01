@@ -23,22 +23,26 @@ export default (env:EnvVariables) => {
 			clean:true
 		},
 		plugins:[
-			new HtmlWebpackPlugin({template:path.resolve(__dirname, 'public', 'index.html')}),
+			new HtmlWebpackPlugin({template:path.resolve(__dirname, 'src', 'index.html')}),
 			new webpack.ProgressPlugin(),
 			new MiniCssExtractPlugin()
 		],
 		module:{
 			rules:[
 				{
-					test:/\.css$/i,
-					use:[{loader:MiniCssExtractPlugin.loader, options:{URL:true}},'css-loader'],
+					test:/\.(scss|css)$/i,
+					use:[{loader:MiniCssExtractPlugin.loader},'css-loader', 'postcss-loader', 'sass-loader'],
 					
 				},
 				{
 					test:/\.tsx?$/,
 					use:'ts-loader',
 					exclude:/node_modules/,
-				}
+				},
+				{
+       				 test: /\.(png|jpe?g|gif)$/i,
+					 type:'asset/resource'
+      			},
 			]
 		},
 		resolve:{
