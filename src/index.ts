@@ -1,33 +1,41 @@
 import './index.scss'
 
-const menuBtn = document.querySelector('.burger-menu')
-const menu = document.querySelector('dialog')
-const closeBtn = document.querySelector('dialog .cross')
+const menuBtn = document.querySelector<HTMLButtonElement>('.burger-menu')
+const modal = document.querySelector<HTMLDialogElement>('.modal')
+const closeBtn = document.querySelector<SVGElement>('.modal .cross')
 
 
-const nav = document.querySelector('.nav')
+const nav = document.querySelector<HTMLDivElement>('.nav')
 
-const office = document.querySelector('.office')
+const office = document.querySelector<HTMLDivElement>('.office')
 
-const minus = document.querySelector('.minus')
-const plus = document.querySelector('.plus')
+const minus = document.querySelector<SVGElement>('.minus')
+const plus = document.querySelector<SVGElement>('.plus')
 
-const officePlus = document.querySelector('.office-plus')
-const officeMinus = document.querySelector('.office-minus')
+const officePlus = document.querySelector<SVGElement>('.office-plus')
+const officeMinus = document.querySelector<SVGElement>('.office-minus')
 
-const check = document.querySelector('.checkbox-wrapper')
-const tick = document.querySelector('.tick')
+const check = document.querySelector<HTMLDivElement>('.checkbox-wrapper')
+const tick = document.querySelector<SVGElement>('.checkbox__tick')
 
-const modalCheck = document.querySelector('.modal-checkbox-wrapper')
-const modalTick = document.querySelector('.modal-tick')
-
-console.log(modalCheck)
+const modalCheck = document.querySelector<HTMLDivElement>('.modal-checkbox-wrapper')
+const modalTick = document.querySelector<SVGElement>('.modal-tick')
 
 menuBtn.addEventListener('click', ()=>{
-	menu.showModal()
+	modal.showModal()
 })
 closeBtn.addEventListener('click', ()=>{
-	menu.close()
+	modal.close()
+})
+
+modal.addEventListener("click",e=>{
+	const modalDismensions = modal.getBoundingClientRect()
+	const closeCondition =
+		e.clientX < modalDismensions.left || 
+		e.clientX > modalDismensions.right ||
+		e.clientY < modalDismensions.top || 
+		e.clientY > modalDismensions.bottom;
+	if(closeCondition){modal.close()}
 })
 
 
@@ -56,7 +64,7 @@ officeMinus.addEventListener('click', ()=>{
 })
 
 check.addEventListener('click', ()=>{
-	tick.classList.toggle('tick-visible')
+	tick.classList.toggle('checkbox__tick-visible')
 })
 
 modalCheck.addEventListener('click', ()=>{
