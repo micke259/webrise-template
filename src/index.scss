@@ -1483,6 +1483,12 @@ button {
 
 @media (max-width:400px) {
 
+	.form .input-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 31px;
+	}
+
 	.container-2 {
 		padding: 0 10px;
 	}
