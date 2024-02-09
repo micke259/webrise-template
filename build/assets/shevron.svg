@@ -1,0 +1,27 @@
+<svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="6" height="9" fill="#E5E5E5"/>
+<g id="Smart Device" clip-path="url(#clip0_0_1)">
+<rect width="1920" height="4066" transform="translate(-713 -2916)" fill="white"/>
+<rect id="Rectangle" x="-713" y="-775" width="1920" height="938" fill="#1B2D37"/>
+<g id="1">
+<g id="Mask Group" opacity="0.2">
+<mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-338" y="-584" width="370" height="620">
+<rect id="Rectangle 2" x="-338" y="-584" width="370" height="620" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0_0_1)">
+<rect id="image" x="-361" y="-639.169" width="416" height="727.712" fill="url(#pattern0)"/>
+</g>
+</g>
+<rect id="Rectangle 2_2" x="-31" y="-27" width="63" height="63" fill="#00B2FF"/>
+<path id="Vector" d="M1 8.5L5 4.5L1 0.5" stroke="white" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_0_1" transform="matrix(0.00218937 0 0 0.00125156 -0.813623 0)"/>
+</pattern>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="4066" fill="white" transform="translate(-713 -2916)"/>
+</clipPath>
+</defs>
+</svg>

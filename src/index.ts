@@ -5,6 +5,8 @@ const modal = document.querySelector<HTMLDialogElement>('.modal')
 const closeBtn = document.querySelector<SVGElement>('.modal .cross')
 
 
+const blockquoteBtn = document.querySelector('.blockquote-button')
+
 const nav = document.querySelector<HTMLDivElement>('.nav')
 
 const office = document.querySelector<HTMLDivElement>('.office')
@@ -15,18 +17,18 @@ const plus = document.querySelector<SVGElement>('.plus')
 const officePlus = document.querySelector<SVGElement>('.office-plus')
 const officeMinus = document.querySelector<SVGElement>('.office-minus')
 
-const check = document.querySelector<HTMLDivElement>('.checkbox-wrapper')
-const tick = document.querySelector<SVGElement>('.checkbox__tick')
 
-const modalCheck = document.querySelector<HTMLDivElement>('.modal-checkbox-wrapper')
-const modalTick = document.querySelector<SVGElement>('.modal-tick')
 
 menuBtn.addEventListener('click', ()=>{
 	modal.showModal()
+	document.body.style.overflow = 'hidden'
 })
 closeBtn.addEventListener('click', ()=>{
 	modal.close()
+	document.body.style.overflow = 'auto'
 })
+
+blockquoteBtn.addEventListener('click', ()=>{document.getElementById("container-3").scrollIntoView({behavior:'smooth'});})
 
 modal.addEventListener("click",e=>{
 	const modalDismensions = modal.getBoundingClientRect()
@@ -63,10 +65,3 @@ officeMinus.addEventListener('click', ()=>{
 	officeMinus.classList.remove('office-minus-open')
 })
 
-check.addEventListener('click', ()=>{
-	tick.classList.toggle('checkbox__tick-visible')
-})
-
-modalCheck.addEventListener('click', ()=>{
-	modalTick.classList.toggle('modal-tick-visible')
-})

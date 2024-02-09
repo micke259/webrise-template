@@ -3,6 +3,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import webpack from  'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import type { PluginOptions as CopyWebpackOptinos } from 'copy-webpack-plugin'
 
 type Mode = 'production' | 'development'
 
@@ -20,12 +22,22 @@ export default (env:EnvVariables) => {
 		output:{
 			path:path.resolve(__dirname, 'build'),
 			filename:'[name].[contenthash].js',
-			clean:true
+			clean:true,
 		},
 		plugins:[
 			new HtmlWebpackPlugin({template:path.resolve(__dirname, 'src', 'index.html')}),
 			new webpack.ProgressPlugin(),
-			new MiniCssExtractPlugin()
+			new MiniCssExtractPlugin(),
+			new CopyWebpackPlugin(
+				{
+					patterns:[
+						{
+							from:path.resolve(__dirname, 'src/assets'),
+							to:path.resolve(__dirname, 'build', 'assets')
+						}
+					]
+				}
+			)
 		],
 		module:{
 			rules:[
@@ -51,7 +63,12 @@ export default (env:EnvVariables) => {
 		devtool:'inline-source-map',
 		devServer:{
 			port:env.port ?? 3000,
-			open:true
+			open:true,
+			hot:true,
+			static:{
+				directory:path.join(__dirname, 'assets'),
+				publicPath:'src/'
+			}
 		}
 	}
 
