@@ -897,14 +897,16 @@ button {
 	cursor: pointer;
 	margin-top: 50px;
 	margin-right: 103px;
-	svg{
+
+	svg {
 		transition: fill 0.3s ease;
-		fill:#CDCDCD;
-			&:hover {
-			fill:#00B2FF
-			}
+		fill: #CDCDCD;
+
+		&:hover {
+			fill: #00B2FF
 		}
 	}
+}
 
 .service-device__logo {
 	width: 216px;
@@ -1044,6 +1046,13 @@ button {
 	.office__list {
 		margin-top: 27px;
 		list-style-type: none;
+
+		li {
+			a {
+				text-decoration: none;
+				color: #1B2D37;
+			}
+		}
 	}
 
 	.office__title {
